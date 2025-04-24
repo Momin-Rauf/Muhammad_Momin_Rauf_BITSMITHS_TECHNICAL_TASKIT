@@ -1,15 +1,15 @@
-'use client';
 import Link from "next/link"
 
 export default function Header() {
   return (
     <header className="bg-[#ff6600] text-black">
-      <div className="max-w-4xl mx-auto px-4 py-2 flex items-center">
-        <div className="flex items-center">
-          <Link href="/" className="font-bold text-white mr-2">
+      <div className="max-w-5xl mx-auto px-4 py-2 flex items-center justify-between">
+        {/* Left side: Logo + Nav */}
+        <div className="flex items-center space-x-4">
+          <Link href="/" className="font-bold text-white">
             <span className="border border-white px-1">Y</span>
           </Link>
-          <nav className="flex space-x-4 text-sm">
+          <nav className="flex items-center space-x-4 text-sm">
             <Link href="/" className="font-bold">
               HackerNews Clone
             </Link>
@@ -22,7 +22,9 @@ export default function Header() {
             <Link href="/">submit</Link>
           </nav>
         </div>
-        <div className="ml-auto text-sm">
+
+        {/* Right side: Login */}
+        <div className="text-sm">
           <Link href="/">login</Link>
         </div>
       </div>
